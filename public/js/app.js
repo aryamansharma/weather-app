@@ -11,7 +11,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     messageOne.textContent = 'Loading...'
 
-    fetch(`http://localhost:3000/weather?address=${userLocation}`).then((resposne) => {
+    fetch(`/weather?address=${userLocation}`).then((resposne) => {
     resposne.json().then((data) => {
         if (data.error){
             messageOne.textContent = data.error
